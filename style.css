@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +8,19 @@
 
 body {
   background: #181719;
+  font-family: Montserrat, sans-serif;
+  color: #ffffff;
 }
 
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 a {
   color: #fff;
   text-decoration: none;
@@ -35,10 +47,9 @@ a:hover {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
   height: 8vh;
 }
 
@@ -52,14 +63,11 @@ nav {
   margin-left: 86px;
 }
 .nav-list li a {
-  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height */
-
-  color: #ffffff;
+  padding-bottom: 8px;
 }
 .mobile-menu {
   display: none;
@@ -74,6 +82,60 @@ nav {
   transition: 0.3s;
 }
 
+.active {
+  border-bottom: 2px solid #fff;
+}
+
+section.container {
+  margin-top: 308px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container__content {
+  flex: 1;
+}
+.container__content h1 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 61px;
+  margin-bottom: 40px;
+}
+
+.container__content p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.container__bg {
+  flex: 2;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 378px) {
   body {
     overflow-x: hidden;
@@ -83,7 +145,7 @@ nav {
     top: 8vh;
     right: 0;
     width: 100vw;
-    height: 92vh;
+    height: 100vh;
     background: #23232e;
     flex-direction: column;
     align-items: center;
@@ -104,18 +166,6 @@ nav {
   }
 
   .nav-list.active {
-    transform: translateX(0);
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
     transform: translateX(0);
   }
 }
