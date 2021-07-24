@@ -122,27 +122,84 @@ section.container {
 
 .container__content button {
   width: 140px;
-  border: 0;
+  border: 1px solid #fff;
   padding: 12px 10px;
   outline: none;
   color: #fff;
-  background: linear-gradient(to right, #fb5283, #ff3527);
+  background: #181719;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.25s;
 }
 
 .container__content button img {
   width: 30px;
   display: none;
+  transition: 0.25s;
 }
 
 .container__content button:hover img {
+  transition: 0.25s;
+  display: block;
+}
+
+.container__content button:hover {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container__image {
   flex: 2;
 }
+.card {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 16px;
+  position: absolute;
+  width: 410px;
+  height: 130px;
+  left: 1200px;
+  top: 990px;
+  border-radius: 6px;
 
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 85px;
+  height: 85px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.card__info h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.card__info h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+
+.card__info p {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  margin-top: 30px;
+}
+footer {
+  margin-top: 200px;
+}
 @keyframes navLinkFade {
   from {
     opacity: 0;
