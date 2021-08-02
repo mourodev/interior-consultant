@@ -1,44 +1,11 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu)
-    this.navList = document.querySelector(navList)
-    this.navLinks = document.querySelectorAll(navLinks)
-    this.activeClass = 'active'
+/* Sélection des éléments HTML */
+let link = document.getElementById('link')
+let burger = document.getElementById('burger')
+let ul = document.querySelector('ul')
 
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = '')
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`)
-    })
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass)
-    this.mobileMenu.classList.toggle(this.activeClass)
-    this.animateLinks()
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener('click', this.handleClick)
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent()
-    }
-    return this
-  }
-}
-
-const mobileNavbar = new MobileNavbar(
-  '.mobile-menu',
-  '.nav-list',
-  '.nav-list li'
-)
-mobileNavbar.init()
+/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
+link.addEventListener('click', function (e) {
+  e.preventDefault()
+  burger.classList.toggle('open')
+  ul.classList.toggle('open')
+})

@@ -3,26 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="shortcut icon"
-      href="./img/devchallenges.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interior Consultant</title>
+    <!-- Fonts  CrimsonPro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts  CrimsonPro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts  Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Interior</title>
   </head>
   <body>
     <header>
+      <a href="#" class="logo">this Interior</a>
       <nav>
-        <a href="#" class="logo">This Interior</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="#" class="active">Home</a></li>
+        <a id="link" href="#"><span id="burger"></span></a>
+        <ul id="menu">
+          <li><a href="/" class="link__active">Home</a></li>
           <li><a href="#">Collection</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
@@ -31,36 +46,46 @@
     </header>
 
     <section class="container">
-      <div class="container__content">
+      <div class="text">
         <h1>Modern interior</h1>
         <p>
-          A full-Service residential & commercial interior design and staging
-          company offering professional organizing & <br />
-          eco-services.
+          A full-Service residential & <br />
+          commercial interior design and staging company offering professional
+          organizing & eco-services.
         </p>
-        <button type="button">
-          Read more <img src="./img/arrow.png" alt="button arrow" />
-        </button>
+        <a href="#" class="button"
+          >Read more
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(231, 224, 224)"
+          >
+            <path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+        </a>
       </div>
 
-      <div class="container__image">
-        <img src="./img/photo1.png" alt="Interior Consultant image" />
+      <div class="image">
+        <img src="./img/photo1.png" alt="image interior" />
 
         <div class="card">
-          <img src="./img/photo2.png" alt="profile image" />
-          <div class="card__info">
+          <div class="profile-image"></div>
+          <div class="profile-name">
             <h2>Aliza Webber</h2>
             <h3>Interior designer</h3>
-            <p>Designed in 2020 by br Aliza Webber</p>
           </div>
+          <h4>Designed in 2020 by Aliza Webber</h4>
         </div>
       </div>
     </section>
 
-    <footer>
+    <footer class="footer">
       <p>
-        created by
-        <a href="https://github.com/mourodev">mourodev</a> - devChallenges.io
+        created by <a href="https://github.com/mourodev">mourodev</a> -
+        devChallenges.io
       </p>
     </footer>
 
