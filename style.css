@@ -130,8 +130,8 @@ header {
   padding: 10px;
   gap: 5px;
   position: absolute;
-  top: 210px;
-  left: 20px;
+  top: 90%;
+  left: 5%;
 }
 
 .card h2 {
@@ -190,12 +190,12 @@ header {
   color: #a9a9a9;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 425px) {
   /* menu mobile */
   #burger {
     width: 30px;
     height: 2px;
-    background: white;
+    background: #fff;
     display: inline-block;
     position: relative;
   }
@@ -204,7 +204,7 @@ header {
     content: '';
     width: 30px;
     height: 2px;
-    background: white;
+    background: #fff;
     display: inline-block;
     position: absolute;
     transform-origin: center;
@@ -265,8 +265,128 @@ header {
   }
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 768px) {
+  header {
+    max-width: 768px;
+  }
+
+  #burger {
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+    position: relative;
+  }
+  #burger::before,
+  #burger::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+  #burger::before {
+    top: -7px;
+  }
+  #burger::after {
+    top: 7px;
+  }
+
+  #burger.open {
+    background: transparent;
+  }
+  #burger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  #burger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  header {
+    position: relative;
+    max-width: 768px;
+  }
+  ul {
+    background: #181719;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 100%;
+    padding: 10px 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  ul.open {
+    transform: scaleY(1);
+  }
+  ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  ul li a {
+    color: #fff;
+  }
+
+  #menu a.link__active::after {
+    margin: 10px 155px auto auto;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+  #menu a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
   header {
     max-width: 1440px;
+    box-shadow: none;
+    margin-bottom: 100px;
+  }
+
+  .container {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text h1 {
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 61px;
+  }
+
+  .text p {
+    width: 410px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 48px;
+  }
+
+  .image {
+    width: 820px;
+  }
+
+  .card {
+    top: 90%;
+    left: 50%;
   }
 }
