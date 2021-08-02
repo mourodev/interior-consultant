@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://thirsty-jones-adf6ba.netlify.app/">
+    <a href="https://peaceful-booth-2c8122.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -44,7 +44,6 @@
 
 ![screenshot](./img/preview02.png)
 
-![screenshot](./img/preview03.png)
 
 
 

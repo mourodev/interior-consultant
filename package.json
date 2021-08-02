@@ -1,0 +1,20 @@
+{
+  "name": "interior-consultant",
+  "version": "1.0.0",
+  "description": "<!-- Please update value in the {}  -->",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mourodev/interior-consultant.git"
+  },
+  "keywords": [],
+  "author": "mourodev https://github.com/mourodev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mourodev/interior-consultant/issues"
+  },
+  "homepage": "https://github.com/mourodev/interior-consultant#readme"
+}
